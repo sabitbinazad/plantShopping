@@ -12,39 +12,13 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #4CAF50; /* A fresh green color */
-    color: #fff; /* White text for contrast */
-    padding: 15px; /* Adds some padding for breathing space */
+    background-color: #4CAF50;
+    color: #fff!important;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    position: sticky; /* Sticks to the top when scrolling */
-    top: 0;
-    z-index: 1000; /* Ensures it stays above other elements */
-}
-.luxury {
-    display: flex;
-    align-items: center;
-}
-
-.luxury img {
-    height: 50px; /* Scaled logo */
-    margin-right: 15px; /* Spacing between logo and text */
-}
-
-.luxury h3 {
-    margin: 0;
-    font-size: 24px; /* Larger title size */
-    font-weight: bold; /* Emphasize the title */
-}
-
-.luxury i {
-    margin: 0;
-    font-size: 14px; /* Subtle tagline size */
-    display: block; /* Separate line for the tagline */
-    color: #d4f5d1; /* Softer white-green for tagline */
 }
 
 .navbar .ul {
@@ -65,16 +39,6 @@ body {
    
 }
 
-.category {
-  font-size: 2rem; /* Large font for category titles */
-  font-weight: bold; /* Emphasize the text */
-  color: #2c3e50; /* Dark shade for better readability */
-  text-align: center; /* Center the category title */
-  margin: 20px 0; /* Add space above and below the title */
-  text-transform: uppercase; /* Make text uppercase for a bold look */
-  border-bottom: 2px solid #27ae60; /* Add a green underline */
-  padding-bottom: 10px; /* Add space below the text */
-}
 /* Product Grid */
 .product-grid {
     display:flex;
@@ -106,6 +70,7 @@ body {
     border-radius: 5px;
     text-align: center;
     position: relative;
+    
     gap: 20px;
 }
 
@@ -130,22 +95,6 @@ body {
 .product-image {
     max-width: 100%;
     height: 200px; /* Adjust height for better consistency */
-}
-.product-description {
-    font-size: 16px; /* Set a comfortable font size for reading */
-    color: #555; /* Neutral dark gray for readability */
-    margin-top: 10px; /* Space above the description */
-    line-height: 1.5; /* Improve line spacing for readability */
-    font-family: 'Arial', sans-serif; /* Clean and modern font */
-    text-align: left; /* Align text to the left */
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-radius: 5px; /* Smooth rounded corners */
-    padding: 10px; /* Add inner spacing for text */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 300px; /* Limit the width for a cleaner layout */
-    overflow-wrap: break-word; /* Ensure long words break into the next line */
-    text-align: center;
-    margin-bottom: 10px;
 }
 
 .product-button {

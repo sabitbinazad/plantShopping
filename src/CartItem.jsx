@@ -3,59 +3,34 @@ import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
 
-
 const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
 
   // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
-    return cart.reduce((total, item) => {
-      const cost = Number(item.cost.replace(/[^0-9.-]+/g, '')); // Remove dollar sign and convert to number
-      const quantity = Number(item.quantity); // Convert quantity to number
-      
-      // If either cost or quantity is NaN, return total without adding it
-      if (isNaN(cost) || isNaN(quantity)) {
-        return total;
-      }
-      
-      return total + (quantity * cost); // Add the total cost of the item
-    }, 0);
-  };
-  
-  // Handle Continue Shopping
-  const handleContinueShopping = () => {
-    onContinueShopping();  // Call the function passed from the parent component
+ 
   };
 
-  // Handle Increment Quantity
+  const handleContinueShopping = (e) => {
+   
+  };
+
+
+
   const handleIncrement = (item) => {
-    dispatch(updateQuantity({ name: item.name, quantity: item.quantity + 1 }));
   };
 
-  // Handle Decrement Quantity
   const handleDecrement = (item) => {
-    if (item.quantity > 1) {
-      dispatch(updateQuantity({ name: item.name, quantity: item.quantity - 1 }));
-    } else {
-      dispatch(removeItem(item.name));  // Remove item if quantity becomes 0
-    }
+   
   };
 
-  // Handle Remove Item from Cart
   const handleRemove = (item) => {
-    dispatch(removeItem(item.name));
   };
 
-  // Calculate total cost for an individual item
+  // Calculate total cost based on quantity for an item
   const calculateTotalCost = (item) => {
-    const costWithoutDollar = item.cost.replace(/[^0-9.-]+/g, ''); // Remove non-numeric characters (except for the decimal point and minus sign)
-    const cost = Number(costWithoutDollar);
-    return item.quantity * cost;
   };
-
-  // Maintain a variable for the total quantity counter
-  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <div className="cart-container">
@@ -89,4 +64,5 @@ const CartItem = ({ onContinueShopping }) => {
 };
 
 export default CartItem;
+
 
